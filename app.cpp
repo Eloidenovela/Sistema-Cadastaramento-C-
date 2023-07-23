@@ -15,7 +15,7 @@
  *  Dicricao: Este e um sistema de castramento, ele usa dois algoritmos,
  *  um de ordenacao, e um de busca. O sistema ordena ou atualiza os dados
  *  usando o algoritmo de ordenacao por insercao, e a busca/pesquisa e feita
- *  pelo algoritmo de busca binario. O algoritmo de busca nao e interativo
+ *  pelo algoritmo de busca binaria. O algoritmo de busca nao e interativo
  *  mas sim, e recursivo.
  *  O Sistema tem a tambem a funcionalidade de remover elementos do seu banco
  *  de dados(arrays), este algoritmo funciona da seguinte maneira: o usuario
