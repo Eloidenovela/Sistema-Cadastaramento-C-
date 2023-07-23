@@ -20,22 +20,19 @@
  *  O Sistema tem a tambem a funcionalidade de remover elementos do seu banco
  *  de dados(arrays), este algoritmo funciona da seguinte maneira: o usuario
  *  seleciona um elemento(indece ou a posicao) para a remocao entao esse elemento
- *  e deslocado para a ultima posicao da lista e é feichado o campo de visao do
+ *  e deslocado para a ultima posicao da lista e Ã© feichado o campo de visao do
  *  utilizador.
  *
  *  O algoritmo de pesquisa pode pesquisar atraves de tres(3) chaves: nome, idade e id.
  */
 
-
 using namespace std;
 
-struct Pessoa {
-
+typedef struct Pessoa {
     string nome;
     short int idade;
     short int id;
-
-};
+} Pessoa;
 
 void add(struct Pessoa *, int, int &);
 void show(struct Pessoa *, int, int);
@@ -43,7 +40,7 @@ void update(struct Pessoa *, int);
 bool b_search(struct Pessoa *, int, int, string, short int, short int, int &);
 void remove(struct Pessoa *, int &, int);
 
-const int size = 10;
+const int size = 100; // espaco maximo do banco de dados(array).
 
 int aux_size = 0;
 Pessoa arr[size];
@@ -68,15 +65,13 @@ int main( ) {
         update(arr, aux_size);
         main();
         break;
-    }
-    case 2: {
+    } case 2: {
         show(arr, aux_size, -1);
         system_pause;
         system_clear;
         main();
         break;
-    }
-    case 3: {
+    } case 3: {
         string name;
         int index = -1, input = -1, id = -1;
         update(arr, aux_size);
@@ -124,8 +119,7 @@ int main( ) {
             main();
         }
         break;
-    }
-    case 4: {
+    } case 4: {
         int id = -1, index = -1;
         show(arr,aux_size, -1);
 
@@ -149,8 +143,7 @@ int main( ) {
         system_clear;
         main();
         break;
-    }
-    case 0:
+    } case 0:
         exit(0);
         break;
     default:
